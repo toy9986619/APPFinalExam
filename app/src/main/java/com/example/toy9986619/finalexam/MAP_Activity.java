@@ -34,7 +34,7 @@ public class MAP_Activity extends AppCompatActivity {
         int sbp = Integer.parseInt(etSBP.getText().toString());
         int dbp = Integer.parseInt(etDBP.getText().toString());
         double map = dbp + ((sbp-dbp)/3);
-        txResult.setText(String.format("%a", map));
+        txResult.setText(String.format("%.2f", map));
         if(80<=map && map<=100){
             txResult.setTextColor(Color.parseColor("#ff0000ff"));
         }else{

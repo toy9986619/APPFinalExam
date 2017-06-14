@@ -35,7 +35,7 @@ public class BMI_Activity extends AppCompatActivity {
         double height = Double.parseDouble(etHeight.getText().toString());
         double bmi = weight/height/height;
 
-        txResult.setText(String.format("%a", bmi));
+        txResult.setText(String.format("%.2f", bmi));
         if(bmi < 16){
             txResult.setTextColor(Color.parseColor("#ffff00ff"));
             txRangeText.setText("Your BMI is in severely underweight range");
@@ -56,10 +56,10 @@ public class BMI_Activity extends AppCompatActivity {
             txResult.setTextColor(Color.parseColor("#ffff0000"));
             txRangeText.setText("Your BMI is in moderately obese range");
             txRange.setText("30 ≤ BMI < 35");
-        }else if(bmi<= 35){
+        }else if(bmi>= 35){
             txResult.setTextColor(Color.parseColor("#ffC00000"));
-            txRangeText.setText("Your BMI is in se verely obese range");
-            txRange.setText("35 ≤ BMI");
+            txRangeText.setText("Your BMI is in severely obese range");
+            txRange.setText("BMI ≤ 35");
         }
 
     }

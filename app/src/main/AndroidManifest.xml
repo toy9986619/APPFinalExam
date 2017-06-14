@@ -9,16 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Main_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".IBWActivity" />
-        <activity android:name=".BMIActivity" />
-        <activity android:name=".MAPActivity"></activity>
+        <activity android:name=".IBW_Activity" />
+        <activity android:name=".BMI_Activity" />
+        <activity android:name=".MAP_Activity"></activity>
     </application>
 
 </manifest>

@@ -37,18 +37,19 @@ public class IBW_Activity extends AppCompatActivity {
         double IBW=0;
         double weight = Double.parseDouble(etWeight.getText().toString());
         double height = Double.parseDouble(etHeight.getText().toString());
-        txKG.setText(String.format("%a", weight));
+        txKG.setText(String.format("%.2f", weight)+" kg");
+
 
         switch (RG.getCheckedRadioButtonId()){
             case R.id.ibw_male:
                 IBW = (height-170)*0.6+62;
-                txRange1.setText(String.format("%a", IBW*0.9));
-                txRange2.setText(String.format("%a", IBW*1.1));
+                txRange1.setText(String.format("%.2f", IBW*0.9)+" kg");
+                txRange2.setText(String.format("%.2f", IBW*1.1)+" kg");
                 break;
             case R.id.ibw_female:
                 IBW = (height-158)*0.5+52;
-                txRange1.setText(String.format("%a", IBW*0.9));
-                txRange2.setText(String.format("%a", IBW*1.1));
+                txRange1.setText(String.format("%.2f", IBW*0.9)+" kg");
+                txRange2.setText(String.format("%.2f", IBW*1.1)+" kg");
                 break;
         }
 
