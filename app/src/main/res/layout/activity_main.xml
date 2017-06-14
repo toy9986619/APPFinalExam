@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.toy9986619.finalexam.Main_Activity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="204dp"
+        android:layout_height="97dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center_vertical"
+        android:text="Personal Physiological\n Data Calculation"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <Button
+        android:id="@+id/main_ibw"
+        android:layout_width="145dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="29dp"
+        android:layout_marginTop="32dp"
+        android:onClick="changeIBW"
+        android:text="Calculate IBW"
+        app:layout_constraintRight_toRightOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/main_bmi"
+        android:layout_width="145dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="28dp"
+        android:onClick="changeBMI"
+        android:text="Calculate BMI"
+        app:layout_constraintLeft_toLeftOf="@+id/main_ibw"
+        app:layout_constraintTop_toBottomOf="@+id/main_ibw"
+        tools:layout_editor_absoluteY="286dp" />
+
+    <Button
+        android:id="@+id/main_map"
+        android:layout_width="145dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="24dp"
+        android:onClick="changeMAP"
+        android:text="Calculate MAP"
+        app:layout_constraintLeft_toLeftOf="@+id/main_bmi"
+        app:layout_constraintTop_toBottomOf="@+id/main_bmi"
+        tools:layout_editor_absoluteY="352dp" />
+
+    <Button
+        android:id="@+id/main_exit"
+        android:layout_width="143dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="23dp"
+        android:onClick="returnButton"
+        android:text="Exit App"
+        app:layout_constraintLeft_toLeftOf="@+id/main_map"
+        app:layout_constraintTop_toBottomOf="@+id/main_map"
+        tools:layout_editor_absoluteY="424dp" />
+</android.support.constraint.ConstraintLayout>
