@@ -1,5 +1,6 @@
 package com.example.toy9986619.finalexam;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,9 @@ public class IBW_Activity extends AppCompatActivity {
     TextView txRange2;
     EditText etHeight;
     EditText etWeight;
+    double IBW=0;
+    double weight;
+    double height;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +38,8 @@ public class IBW_Activity extends AppCompatActivity {
     }
 
     public void Result(View v){
-        double IBW=0;
-        double weight = Double.parseDouble(etWeight.getText().toString());
-        double height = Double.parseDouble(etHeight.getText().toString());
+        weight = Double.parseDouble(etWeight.getText().toString());
+        height = Double.parseDouble(etHeight.getText().toString());
         txKG.setText(String.format("%.2f", weight)+" kg");
 
 
@@ -66,6 +69,14 @@ public class IBW_Activity extends AppCompatActivity {
     }
 
     public void send(View v){
-
+        if(weight<IBW*0.9 || weight > IBW*1.1){
+            Intent email = new Intent(Intent.ACTION_SEND);
+            email.putExtra(Intent.EXTRA_EMAIL, new String[]{"john.smith@abc.com.tw"});
+            email.putExtra(Intent.EXTRA_SUBJECT, "Warning Letter");
+            email.putExtra(Intent.EXTRA_TEXT, "It is a goodwill letter to remind you that your body weight("+weight+" Kg)\n" +
+                    "exceeds 10% range of ideal body weight");
+            email.setType("message/rfc822");
+            startActivity(Intent.createChooser(email, "Choose an Email client :"));
+        }
     }
 }
