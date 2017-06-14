@@ -24,10 +24,10 @@ public class BMI_Activity extends AppCompatActivity {
 
     public void findViews(){
         txResult = (TextView) findViewById(R.id.bmi_result);
-        txRange = (TextView) findViewById(R.id.bmi_range);
+        txRange = (TextView) findViewById(R.id.map_range1);
         etHeight = (EditText) findViewById(R.id.bmi_height);
         etWeight = (EditText) findViewById(R.id.bmi_weight);
-        txRangeText = (TextView) findViewById(R.id.bmi_rangetext);
+        txRangeText = (TextView) findViewById(R.id.map_rangetext);
     }
 
     public void Result(View v){
@@ -66,5 +66,9 @@ public class BMI_Activity extends AppCompatActivity {
 
     public void Exit(View v){
         BMI_Activity.this.finish();
+    }
+
+    public void send(View v){
+
     }
 }

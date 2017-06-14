@@ -27,7 +27,7 @@ public class IBW_Activity extends AppCompatActivity {
     public void findViews(){
         RG = (RadioGroup) findViewById(R.id.sex);
         txKG = (TextView) findViewById(R.id.ibw_kg);
-        txRange1 = (TextView) findViewById(R.id.ibw_range1);
+        txRange1 = (TextView) findViewById(R.id.map_range1);
         txRange2 = (TextView) findViewById(R.id.ibw_range2);
         etHeight = (EditText) findViewById(R.id.ibw_height);
         etWeight = (EditText) findViewById(R.id.ibw_weight);
